@@ -163,6 +163,21 @@ span{
   border-color: #cb9b51;
 }
 
+.rotate-3d {
+  animation: rotate 3s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
 @keyframes slideTop {
   0% {
       opacity: 0;

@@ -42,12 +42,12 @@ const EthereumChart = () => {
           {
             label: 'Ethereum Price (USD)',
             data: prices,
-            borderColor: '#cb9b51',
+            borderColor: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
             borderWidth: 3,
             fill: true,
-            backgroundColor: 'rgba(255, 215, 1, 0.1)',
+            backgroundColor: 'rgba(203, 155, 81, 0.1)', // Adjust color for a 3D-like effect
             pointRadius: 5,
-            pointBackgroundColor: '#cb9b51',
+            pointBackgroundColor: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
             pointBorderWidth: 2,
           },
         ],
@@ -74,8 +74,6 @@ const EthereumChart = () => {
               maxRotation: 0,
               maxTicksLimit: 10, // Number of visible ticks
             },
-            min: timestamps[0], // Set the minimum visible date
-            max: timestamps[timestamps.length - 1], // Set the maximum visible date
           },
           y: {
             display: true,
@@ -99,7 +97,7 @@ const EthereumChart = () => {
           legend: {
             display: true,
             labels: {
-              color: '#cb9b51',
+              color: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
               font: {
                 size: 18,
               },
@@ -108,17 +106,6 @@ const EthereumChart = () => {
           tooltip: {
             enabled: true,
           },
-        },
-        interaction: {
-          mode: 'index',
-          intersect: false,
-        },
-        pan: {
-          enabled: true,
-          mode: 'x',
-        },
-        zoom: {
-          mode: 'x',
         },
       },
     });
