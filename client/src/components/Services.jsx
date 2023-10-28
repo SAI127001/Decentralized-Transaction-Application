@@ -6,7 +6,7 @@ const ServiceCard = ({ color, title, image, subtitle1, subtitle2 }) => (
   <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
     <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
       {image ? (
-        <img src={image} alt={title} className="w-10 h-10 rounded-full" />
+        <img src={image} alt={`Image of ${title}`} className="w-10 h-10 rounded-full" />
       ) : null}
     </div>
     <div className="ml-5 flex flex-col flex-1">
