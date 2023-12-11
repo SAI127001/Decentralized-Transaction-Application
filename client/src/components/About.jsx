@@ -2,7 +2,7 @@ import React from "react";
 import {saket, sai, ether} from "../assets"
 import { SiEthereum} from "react-icons/si";
 
-const ServiceCard = ({ color, title, image, subtitle1, subtitle2 }) => (
+const About = ({ color, title, image, subtitle1, subtitle2 }) => (
   <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
     <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
       {image ? (
@@ -21,8 +21,8 @@ const ServiceCard = ({ color, title, image, subtitle1, subtitle2 }) => (
   </div>
 );
 
-const Services = () => (
-  <div className="flex w-full justify-center items-center gradient-bg-services">
+const AboutCard = () => (
+  <div className="flex w-full justify-center items-center gradient-bg-aboutcard">
     <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
       <div className="flex-1 flex flex-col justify-start items-start">
         <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
@@ -35,20 +35,20 @@ const Services = () => (
       </div>
 
       <div className="flex-1 flex flex-col justify-start items-center">
-        <ServiceCard
+        <About
           color="black"
           title="SAKET COLLEGE OF ARTS, SCIENCE & COMMERCE"
           image={saket}
           subtitle=""
         />
-        <ServiceCard
+        <About
           color="bg-[#8945F8]"
           title="TERUKULA SAI"
           image={sai}
           subtitle1="PNR No : 2021016400730531" 
           subtitle2="Roll No : 233026 "
         />
-        <ServiceCard
+        <About
           color="black"
           title="Decentralized Transaction Web3 Application"
           image={ether}
@@ -59,4 +59,4 @@ const Services = () => (
   </div>
 );
 
-export default Services;
+export default AboutCard;

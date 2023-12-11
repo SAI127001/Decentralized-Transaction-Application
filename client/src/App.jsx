@@ -1,5 +1,4 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
-import EthereumChart from "./components/EthereumChart";
+import { Navbar, Welcome, EthereumChart, Footer, AboutCard, Transactions } from "./components";
 
 const App = () => (
   
@@ -9,7 +8,7 @@ const App = () => (
       <Welcome />
       <EthereumChart/>
     </div>
-    <Services />
+    <AboutCard />
     <Transactions />
     <Footer />
   </div>

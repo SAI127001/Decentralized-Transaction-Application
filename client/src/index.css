@@ -21,7 +21,7 @@ body {
     radial-gradient(at 100% 0%, rgba(66, 6, 71, 0.493) 0, transparent 50%);
 }
 
-.gradient-bg-services {
+.gradient-bg-aboutcard {
   background-color:#0f0e13;
   background-image: 
     radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
