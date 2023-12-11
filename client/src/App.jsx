@@ -4,7 +4,7 @@ const App = () => (
   
   <div className="min-h-screen">
     <div className="gradient-bg-welcome">
-      <Navbar />
+      {/* <Navbar /> */}
       <Welcome />
       <EthereumChart/>
     </div>
