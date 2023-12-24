@@ -102,6 +102,7 @@ span{
 }
 
 .btn-box:hover {
+  transform: scale(2);
   box-shadow: 0 0 5px #daa455e8,
   0 0 25px #daa455e8, 0 0 50px #daa455e8,
   0 0 100px #daa455e8, 0 0 200px #daa455e8;
@@ -168,6 +169,25 @@ span{
 .rotate-3d {
   animation: rotate 3s infinite linear;
   transform-origin: center;
+}
+
+.about{
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+}
+
+.about-img{
+  border-width: 1px;
+  /* border-color: rgba(0, 0, 0, 0.644); */
+  border-color: rgba(240, 233, 233, 0.3);
+}
+
+.about:hover {
+  transform: scale(6); /* Adjust the scale factor as needed */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  box-shadow: 0 0 5px rgba(240, 233, 233, 0.3),
+  0 0 25px rgba(240, 233, 233, 0.3), 0 0 50px rgba(240, 233, 233, 0.3),
+  0 0 100px rgba(240, 233, 233, 0.3), 0 0 200px rgba(240, 233, 233, 0.3);
 }
 
 @keyframes rotate {
