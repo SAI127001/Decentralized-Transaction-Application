@@ -1,12 +1,18 @@
-import { Navbar, Welcome, EthereumChart, Footer, AboutCard, Transactions } from "./components";
+import {
+  Welcome,
+  EthereumChart,
+  Footer,
+  AboutCard,
+  Transactions,
+  Cursor,
+} from "./components";
 
 const App = () => (
-  
   <div className="min-h-screen">
     <div className="gradient-bg-welcome">
-      {/* <Navbar /> */}
+      <Cursor />
       <Welcome />
-      <EthereumChart/>
+      <EthereumChart />
     </div>
     <AboutCard />
     <Transactions />

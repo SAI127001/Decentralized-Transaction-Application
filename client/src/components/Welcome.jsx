@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
-import { AiFillAccountBook, AiFillPlayCircle, AiOutlineApi } from "react-icons/ai";
+import {
+  AiFillAccountBook,
+  AiFillPlayCircle,
+  AiOutlineApi,
+} from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
@@ -7,7 +11,8 @@ import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
-const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.2px] border-company text-sm font-light text-white";
+const companyCommonStyles =
+  "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.2px] border-company text-sm font-light text-white";
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
@@ -21,7 +26,14 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
+  const {
+    currentAccount,
+    connectWallet,
+    handleChange,
+    sendTransaction,
+    formData,
+    isLoading,
+  } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
@@ -41,8 +53,9 @@ const Welcome = () => {
             Connecting you to the <span>Decentralize</span> future.
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base tag-ani">
-            Experience a secure, user-friendly platform for seamless cryptocurrency exchange. 
-            Unlock the potential of digital assets and shape your financial future with confidence.
+            Experience a secure, user-friendly platform for seamless
+            cryptocurrency exchange. Unlock the potential of digital assets and
+            shape your financial future with confidence.
           </p>
           {!currentAccount && (
             <button
@@ -61,18 +74,14 @@ const Welcome = () => {
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
               Web 3.0
             </div>
-            <div className={companyCommonStyles}>
-              Security
-            </div>
+            <div className={companyCommonStyles}>Security</div>
             <div className={`sm:rounded-tr-2xl ${companyCommonStyles}`}>
               Ethereum
             </div>
             <div className={`sm:rounded-bl-2xl ${companyCommonStyles}`}>
               Reliability
             </div>
-            <div className={companyCommonStyles}>
-              Low Fees
-            </div>
+            <div className={companyCommonStyles}>Low Fees</div>
             <div className={`rounded-br-2xl ${companyCommonStyles}`}>
               Blockchain
             </div>
@@ -95,28 +104,52 @@ const Welcome = () => {
                 <p className="text-white font-semibold text-lg mt-1 Ether-back">
                   Ethereum
                 </p>
+                {/* <p className="text-white font-light text-sm mt-1">
+                  Balance: {formatBalance(accountBalance)} ETH
+                </p> */}
               </div>
             </div>
           </div>
+
           <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-            <Input placeholder="Address to Transfer" name="addressTo" type="text" handleChange={handleChange} />
-            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
-            <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
-            <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
+            <Input
+              placeholder="Address to Transfer"
+              name="addressTo"
+              type="text"
+              handleChange={handleChange}
+            />
+            <Input
+              placeholder="Amount (ETH)"
+              name="amount"
+              type="number"
+              handleChange={handleChange}
+            />
+            <Input
+              placeholder="Keyword (Gif)"
+              name="keyword"
+              type="text"
+              handleChange={handleChange}
+            />
+            <Input
+              placeholder="Enter Message"
+              name="message"
+              type="text"
+              handleChange={handleChange}
+            />
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-            {isLoading
-              ? <Loader />
-              : (
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
-                >
-                  Transfer
-                </button>
-              )}
+            {isLoading ? (
+              <Loader />
+            ) : (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+              >
+                Transfer
+              </button>
+            )}
           </div>
         </div>
       </div>
