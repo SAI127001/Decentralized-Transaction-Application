@@ -229,6 +229,12 @@ span {
     0 0 100px rgba(240, 233, 233, 0.3), 0 0 200px rgba(240, 233, 233, 0.3);
 }
 
+.transaction {
+  border-radius: 10px;
+  background: #050505c7;
+  box-shadow: inset 20px 20px 67px #040404, inset -20px -20px 67px #060606;
+}
+
 @keyframes rotate {
   0% {
     transform: rotateY(0deg);

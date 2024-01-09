@@ -145,7 +145,7 @@ const Welcome = () => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+                className="text-white w-full mt-2 border-[1px] p-2 border-[#c8a849] hover:bg-[#c8a849] hover:text-black rounded-full cursor-pointer"
               >
                 Transfer
               </button>
