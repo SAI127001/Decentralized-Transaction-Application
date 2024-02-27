@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Chart from 'chart.js/auto';
-import axios from 'axios';
+import React, { useEffect, useRef, useState } from "react";
+import Chart from "chart.js/auto";
+import axios from "axios";
 
 const EthereumChart = () => {
   const chartRef = useRef(null);
@@ -17,7 +17,7 @@ const EthereumChart = () => {
 
         setPriceData(data);
       } catch (error) {
-        console.error('Error fetching Ethereum price data:', error);
+        console.error("Error fetching Ethereum price data:", error);
       }
     };
 
@@ -29,25 +29,27 @@ const EthereumChart = () => {
       return;
     }
 
-    const timestamps = priceData.map((entry) => new Date(entry[0]).toLocaleDateString());
+    const timestamps = priceData.map((entry) =>
+      new Date(entry[0]).toLocaleDateString()
+    );
     const prices = priceData.map((entry) => entry[1]);
 
-    const ctx = chartRef.current.getContext('2d');
+    const ctx = chartRef.current.getContext("2d");
 
     new Chart(ctx, {
-      type: 'line',
+      type: "line",
       data: {
         labels: timestamps,
         datasets: [
           {
-            label: 'Ethereum Price (USD)',
+            label: "Ethereum Price (USD)",
             data: prices,
-            borderColor: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
-            borderWidth: 3,
+            borderColor: "rgba(203, 155, 81, 1)", // Adjust color for a 3D-like effect
+            borderWidth: 1.5,
             fill: true,
-            backgroundColor: 'rgba(203, 155, 81, 0.1)', // Adjust color for a 3D-like effect
-            pointRadius: 5,
-            pointBackgroundColor: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
+            backgroundColor: "rgba(203, 155, 81, 0.1)", // Adjust color for a 3D-like effect
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(203, 155, 81, 1)", // Adjust color for a 3D-like effect
             pointBorderWidth: 2,
           },
         ],
@@ -60,14 +62,14 @@ const EthereumChart = () => {
             display: true,
             title: {
               display: true,
-              text: 'Date',
-              color: 'white',
+              text: "Date",
+              color: "white",
               font: {
                 size: 18,
               },
             },
             ticks: {
-              color: 'white',
+              color: "white",
               font: {
                 size: 14,
               },
@@ -79,14 +81,14 @@ const EthereumChart = () => {
             display: true,
             title: {
               display: true,
-              text: 'Price (USD)',
-              color: 'white',
+              text: "Price (USD)",
+              color: "white",
               font: {
                 size: 18,
               },
             },
             ticks: {
-              color: 'white',
+              color: "white",
               font: {
                 size: 14,
               },
@@ -97,7 +99,7 @@ const EthereumChart = () => {
           legend: {
             display: true,
             labels: {
-              color: 'rgba(203, 155, 81, 1)', // Adjust color for a 3D-like effect
+              color: "rgba(203, 155, 81, 1)", // Adjust color for a 3D-like effect
               font: {
                 size: 18,
               },
