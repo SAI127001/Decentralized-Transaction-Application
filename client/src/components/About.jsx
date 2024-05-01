@@ -1,7 +1,7 @@
 import React from "react";
 import { saket, sai, ether } from "../assets";
 
-const About = ({ color, title, image, subtitle1, subtitle2 }) => (
+const About = ({ color, title, image, subtitle1, subtitle2, subtitle3 }) => (
   <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
     <div
       className={`w-10 h-10 rounded-full flex justify-center items-center ${color} about`}
@@ -19,6 +19,7 @@ const About = ({ color, title, image, subtitle1, subtitle2 }) => (
       <p className="mt-2 text-white text-sm md:w-9/12">
         {subtitle1}
         <p>{subtitle2}</p>
+        <p>{subtitle3}</p>
       </p>
     </div>
   </div>
@@ -51,6 +52,7 @@ const AboutCard = () => (
           image={sai}
           subtitle1="PNR No : 2021016400730531"
           subtitle2="Roll No : 233026 "
+          subtitle3="Seat No : 1071953"
         />
         <About
           color=""
